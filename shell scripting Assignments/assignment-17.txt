@@ -1,0 +1,13 @@
+#! /bin/bash
+dt1=$(date)
+while read previoustext
+do 
+    echo $previoustext
+done < assignment-17.txt
+
+echo "end of the script time is : $dt1" >> assignment-17.txt
+
+
+answer
+
+end of the script time is : Wednesday 07 July 2021 08:41:46 AM IST

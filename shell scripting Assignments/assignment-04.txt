@@ -1,0 +1,7 @@
+#! /bin/bash
+echo " hi how are you "
+echo "iam doing my shell script assignment" 
+echo "this is my second technology ">/dev/null
+ ans
+hi how are you 
+iam doing my shell script assignment

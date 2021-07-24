@@ -1,0 +1,627 @@
+GRADEL ASSIGNMENT
+--------------------
+
+
+NUMBER DATA TYPES
+-----------------------------------
+package com.test.demo
+
+//answer a
+
+def v=2
+println v.getClass().getName()
+//======================================
+def y=20
+println y.getClass().getName()
+//======================================
+def z=200
+println z.getClass().getName()
+//========================================
+def a=2000
+println a.getClass().getName()
+//==========================================
+def b=20000
+println b.getClass().getName()
+//=========================================
+def c=2000000
+println c.getClass().getName()
+
+
+//====================================
+def k=2000000000000000000000
+println k.getClass().getName()
+
+//===========================================
+
+
+
+def d=2.0
+println d.getClass().getName()
+//======================================
+def e=2.00
+println e.getClass().getName()
+//======================================
+def f=2.000
+println f.getClass().getName()
+//=====================================
+ 
+//answer b
+
+def x=1+1.5
+
+println x.getClass().getName()
+//==========================================
+
+//answer c
+
+def s= 7/2
+println s.getClass().getName()
+
+ANSWER
+--------------
+
+java.lang.Integer
+java.lang.Integer
+java.lang.Integer
+java.lang.Integer
+java.lang.Integer
+java.lang.Integer
+java.math.BigInteger
+java.math.BigDecimal
+java.math.BigDecimal
+java.math.BigDecimal
+java.math.BigDecimal
+java.math.BigDecimal
+
+
+2.WRAPPER CLASS
+--------------------
+
+
+package com.test.demo
+
+ println Byte.MIN_VALUE
+ 
+ println Byte.MAX_VALUE
+ //---------------------------------------
+ 
+ 
+ println Short.MIN_VALUE
+ 
+ println Short.MAX_VALUE
+ 
+ 
+ //---------------------------------------
+ 
+ 
+ println Integer.MIN_VALUE
+ 
+ println Integer.MAX_VALUE
+ 
+ 
+ //--------------------------------------
+ 
+ 
+ println Long.MIN_VALUE
+ 
+ println Long.MAX_VALUE
+ //------------------------------------------
+ 
+ println Double.MIN_VALUE
+ 
+ println Double.MAX_VALUE
+ 
+ //-------------------------------------------
+ 
+ println Character.MIN_VALUE
+ 
+ println Character.MAX_VALUE
+ 
+ //-----------------------------------------
+ 
+ANSWER
+-------
+
+-128
+127
+-32768
+32767
+-2147483648
+2147483647
+-9223372036854775808
+9223372036854775807
+4.9E-324
+1.7976931348623157E308
+
+
+3.  2SCOMPLIMENT
+   --------------
+
+
+package com.test.demo 
+byte a=10
+
+println a.getClass().getName()
+
+def x=Byte.MAX_VALUE+1
+println x
+println x.getClass()
+
+
+ANSWER
+-------
+
+java.lang.Byte
+128
+class java.lang.Integer
+
+
+4.STRINGS AND GROOVY STRINGS
+-------------------------------
+
+
+package com.test.demo
+
+def a="Hello, groovy"
+println a.length()
+
+//-----------------------------------------
+
+String b="veda"
+println "hello"+b
+
+println  "hello $b"
+
+//-------------------------------------------
+
+String s="racecar"
+String i="racecar"
+String j=i.reverse()
+println i.equals(j)
+
+
+String str="Bob"
+String str2=str.reverse()
+println str.equalsIgnoreCase(str2)
+
+//---------------------------------------------
+
+String y="Hello, world. how are you"
+String z=y.split()
+println z
+println z.length()
+
+//--------------------------------------------------
+token=y.tokenize()
+println token
+println token.size()
+	
+//------------------------------------------------
+println y.substring(7,12)
+
+//---------------------------------------
+k=y.reverse()
+println k[0..3]
+
+ANSWER
+--------
+
+13
+helloveda
+hello veda
+true
+true
+[Hello,, world., how, are, you]
+31
+[Hello,, world., how, are, you]
+5
+world
+uoy 
+
+5.PRIME NUMBER
+-----------------
+
+package com.test.demo
+
+def Prime(def num)
+{
+def	i=2
+def	count=0
+while(i<num)
+	{
+	if (num%i==0){
+		count=count+1
+	if (count==1){
+				return false
+			}
+		}
+		i=i+1
+	}
+	return true
+ }
+
+ print "enter the num: "
+def num= 23
+ result=Prime(num)
+ if (result){
+	 println "yes $num prime number"
+ }
+ else{ println "$num is not a primenumber"}
+
+  ANSWER
+---------
+
+
+enter the num: yes 23 prime number
+
+
+6.SORTINGSTRINGS
+-----------------
+
+package com.test.demo
+
+def lst=["apple","banana","pineapple","mango","cheery","apples"]
+println "original list --> "+lst
+println "sorted list in ascending order--> "+lst.sort()
+println "sorted list in descending order --> "+lst.sort().reverse()
+
+ANSWER
+--------
+
+original list --> [apple, banana, pineapple, mango, cheery, apples]
+sorted list in ascending order--> [apple, apples, banana, cheery, mango, pineapple]
+sorted list in descending order --> [pineapple, mango, cheery, banana, apples, apple]
+
+
+7. PROCESSINGLIST
+-------------------
+
+package com.test.demo
+
+
+def lst=[1,2,3,4,5]
+def lst2=lst.collect{item -> item*2}
+sum1=0
+sum2=0
+
+for (Integer i=0;i<lst.size();i++){
+	sum1=sum1+lst[i]
+	sum2=sum2+lst2[i]
+}
+avg1=sum1/lst.size()
+avg2=sum2/lst.size()
+println "$avg1 $avg2"
+
+ANSWER
+----------
+
+3 6
+
+7.CLOSURES
+------------
+
+package com.test.demo
+
+def lst=[-1,-2,3,4,5,0,6,7,8,9]
+def closu=lst.findAll{item -> item >0}
+println closu
+
+ANSWER
+----------
+
+
+[3, 4, 5, 6, 7, 8, 9]
+
+8.MULTILINESTRINGS
+---------------------
+
+
+package com.test.demo
+
+
+def str="""  hello this is groovy a programming
+ language which is similar to java python c
+ syntax. 
+    This is the line for assignment."""
+
+st=str.toList()
+count=0
+for (i in str){
+   if (i=='a'|| i=='e' || i=='i'||i=='o'||i=='u'){
+	   count=count+1
+   }
+}
+println count
+
+ANSWER
+---------
+
+33
+
+9.PADDED BINERY OUTPUT
+----------------------
+
+package com.test.demo
+
+Integer num=16
+int i
+for ( ;i<num;){
+	a=Integer.toBinaryString(i)
+	
+	println(a.padLeft(4,'0'))
+	i++
+}
+
+ANSWER
+----------
+
+0000
+0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+1010
+1011
+1100
+1101
+1110
+1111
+
+10. ENCODE AND DECODE
+----------------------------
+
+print "enter the user name: "
+def user_name=System.console().readLine()
+
+print "enter the password: "
+def password=System.console().readLine()
+def id=user_name+":"+password
+//println id
+byte[] encoded=Base64.getEncoder().encode(id.getBytes())
+println "Encoded bytes data is --> $encoded"
+j=new String(Base64.getDecoder().decode(encoded))
+words=j.split(":")
+user=words[0]
+pssd=words[1]
+println "Decoded User_name --> $user || Password -->$pssd"
+
+answer:
+
+PS C:\Users\user\Desktop\groovy> groovy Encode_decode.groovy
+enter the user name: mahesh123
+enter the password: 123mahesh
+Encoded bytes data is --> [98, 87, 70, 111, 90, 88, 78, 111, 77, 84, 73, 122, 79, 106, 69, 121, 77, 50, 49, 104, 97, 71, 86, 122, 97, 65, 61, 61]
+Decoded User_name --> vedakumar06 || Password -->12345
+
+
+11. SORTINGLIST
+--------------------------
+class Course {
+
+	String name
+	int days
+	def getvalues(String n ,int d)
+	{
+		def name = n
+		def days = d
+		def l = [name:n,days:d]
+	}
+}
+
+
+Course First=new Course()
+Course Second=new Course()
+Course Third=new Course()
+Course Fourth=new Course()
+
+def common = [First.getvalues('git', 2),   Second.getvalues('groovy', 2), Third.getvalues('python', 4), Fourth.getvalues('unix', 4)]
+def sort = common.sort{a, b -> b["days"] <=> a["days"] ?: a["name"] <=> b["name"]}
+sort.each { println it }
+
+Answer:
+PS C:\Users\user\Desktop\groovy> groovy class_string.groovy
+[name:python, days:4]
+[name:unix, days:4]
+[name:git, days:2]
+[name:groovy, days:2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

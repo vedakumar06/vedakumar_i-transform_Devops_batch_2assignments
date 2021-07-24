@@ -1,0 +1,20 @@
+#! /bin/bash
+ 
+ read -p "FIRSTNAME:" first_name
+ read -p "LASTNAME:" last_name
+ read -p "USERAGE:" user_age
+ echo  "FIRSTNAME:" $first_name
+ echo  "LASTNAME:" $last_name
+ echo  "USERAGE:" $user_age
+  a1=$(( $user_age+10 ))
+  echo "$first_name $last_name and his age after 10 years is $a1"
+
+answer
+
+FIRSTNAME:veda
+LASTNAME:kumar
+USERAGE:23
+FIRSTNAME: veda
+LASTNAME: kumar
+USERAGE: 23
+veda kumar and his age after 10 years is 33

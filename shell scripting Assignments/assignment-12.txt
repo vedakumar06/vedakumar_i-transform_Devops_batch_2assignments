@@ -1,0 +1,26 @@
+#! /bin/bash
+echo "enter a number between 1-3:"
+read selected
+a1=$selected
+
+if [ "$a1" -eq 1 ] 2>&1
+then 
+echo "you choosed $a1 number"
+elif [ "$a1" -eq 2 ] 2>&1
+then 
+echo "choosen correct number"
+elif [ "$a1" -eq 3 ] 2>&1
+then
+echo "you have choosen $a1 number"
+else
+echo "out of boundary"
+fi
+
+answer
+enter a number between 1-3:
+1
+you choosed 1 number
+
+enter a number between 1-3:
+2
+choosen correct number

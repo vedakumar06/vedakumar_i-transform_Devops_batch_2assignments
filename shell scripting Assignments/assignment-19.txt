@@ -1,0 +1,36 @@
+#! /bin/bash
+trap "print the signal found"SIGINT SIGTSTP 9 15
+ourchoice=(idli milk dosa chapathi exit)
+select i in ${ourchoice[@]}
+do
+echo $i
+ case $i in
+ exit) break ;;
+ idli)
+ echo $i
+ for cmd in clear
+ do
+ $cmd
+ done ;;
+ milk)
+ for cmd in clear
+ do
+ $cmd 
+ done ;;
+ dosa)
+ for cmd in clear
+ do
+ $cmd
+ done ;;
+ chapathi)
+ for cmd in clear
+ do
+ $cmd
+ done ;;
+ *) echo "choose correcct choice"
+ esac
+ done 
+ exit 0
+
+answer
+

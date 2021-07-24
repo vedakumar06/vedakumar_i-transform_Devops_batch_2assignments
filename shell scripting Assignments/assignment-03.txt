@@ -1,0 +1,10 @@
+#! /bin/bash  
+
+a=1
+b=2
+echo $a
+echo $b            
+
+                     #  1 telling our system to use bash as default shell
+                      # 2&3 intializing value to variable a and b
+                    # 4 printing the value to terminal 

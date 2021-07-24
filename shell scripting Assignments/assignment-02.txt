@@ -1,0 +1,10 @@
+#! /bin/bash
+
+read -p "MYUSERNAME:"  user_var
+echo "myusername" $user_var
+
+read -p "MYPASSWORD:" pass_var
+echo "MYPASSWORD:" $pass_var
+dt=$(date)
+echo  STARTOFSCRIPT $dt: >> text.sh
+echo ENDOFSCRIPT $dt: >> text1.sh

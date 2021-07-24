@@ -1,0 +1,36 @@
+#! /bin/bash
+items=('dosa' 'chapathi' 'idli')
+echo  "pick up[ one from list"
+
+for i in ${items[@]}
+do
+echo $i
+done
+read -p "pick the item:" item
+case $item in
+dosa )
+echo "DOSA--RS 40/" ;;
+chapathi )
+echo "chapathi--is RS 25/" ;;
+idli )
+echo "idli-- is RS 15/" ;;
+#break;;
+* ) echo -e "you choosen wrong msg please check it again "
+esac
+ answer
+
+ick up[ one from list
+dosa
+chapathi
+idli
+pick the item:chapathi
+chapathi--is RS 25/
+
+pick up[ one from list
+dosa
+chapathi
+idli
+pick the item:idli
+idli-- is RS 15/
+
+

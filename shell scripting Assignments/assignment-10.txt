@@ -1,0 +1,12 @@
+#! /bin/bash
+username=$1
+password=$2
+
+a1=$username
+b1=$password
+
+echo "$a1 and $b1 as exepected "
+
+answer
+./assignment-10.sh vedakumar 1234
+vedakumar and 1234 as exepected

@@ -1,0 +1,13 @@
+#! /bin/bash
+
+while read line 
+do
+    echo $line
+    
+done < assignment-16.txt
+
+answer
+
+hi ubuntu welcome
+this software is very
+good to use

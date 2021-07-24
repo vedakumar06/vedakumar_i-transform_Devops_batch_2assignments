@@ -1,0 +1,14 @@
+#! /bin/bash
+read -p "enter any number:" value
+while [ $value -ne 0 ]
+do
+echo "count $value"
+((value--))
+done
+
+answers
+
+enter any number:3
+count 3
+count 2
+count 1

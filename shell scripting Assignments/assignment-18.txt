@@ -1,0 +1,15 @@
+#! /bin/bash
+IFS=";"
+while read sentence
+do
+    for i in $sentence
+    do
+        echo "$i"
+    done
+done < assignment-18.txt
+
+ answer
+
+hi | this 
+ is assignment | 18 
+ running | 

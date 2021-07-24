@@ -1,0 +1,24 @@
+#! /bin/bash
+ 
+ echo -e "guess any secrect number between 1-5:/c"
+ read number
+ 
+ choosen=$number
+ rightnumber=3
+  
+  if [ "$choosen" -eq "$rightnumber" ]
+  then
+  echo "you choosen right number"
+  else 
+  echo "wrong number"
+  fi
+
+answer
+
+guess any secrect number between 1-5:/c
+2
+wrong number
+
+guess any secrect number between 1-5:/c
+3
+you choosen right number

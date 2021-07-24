@@ -1,0 +1,261 @@
+Objective:- Assignments will help trainees to understand the basics of unix command and how to explore and use it.
+
+DO NOT copy paste commands from internet, you can take help of the Unix in-built command manual.
+
+Be Honest to yourself!
+
+Important command and option to learn unix commands:-
+man Command
+Example:-
+man ls
+
+--help Option
+Example:-
+ls --help
+
+NOTE:- Always use "man" command before using any unix commands and read about it and its options and how to use it.
+
+Assignments:-
+
+1)List the contents of a directory and their attributes
+Ans:we use command 'ls -l'
+
+2)Long list the content with file, directory ownership, permissions,sizes, etc…
+we use 'ls -l'
+
+3)Display the size of the file in human readable format
+Ans: we use "ls -hl"
+
+4)Show all files and folders including hidden one 
+Ans: we use "ls -al"
+ls
+5)list directories recursively
+Ans: we use "ls -R"
+
+6)Sort the files by size with largest at the top
+Ans: we use "ls -S"
+
+7)Sort the files by last time modified displaying the newest first.
+Ans: we use "ls --sort-t" or "ls -t"
+
+8)Diplay the location of a program/command, where it is installed.
+ans: $realpath <name>
+9)Which command is used to switch directory from one to another
+ans: $cd (directory name)- here cd is used to change directory from one to another 
+10)List all the environment variables set for the current shell environment
+ans: $env command
+
+11)Did you notice something in the output of "env" command?
+ans: Using env, variables may be added or removed, and existing variables may be changed by assigning new values to them.
+
+
+
+12)Which command is used to print the text or any variables value in the Console/Terminal?
+Ans: "echo" command used to print the text or any variables in the console.
+
+13)Print the value of the env variable "PATH" on the console
+ans: $printenv command.
+14)Is linux a case-sensitive operating system?
+Ans: Yes, linux is a case-sensitive operating system.
+
+15)Is, "Ls" same as "ls"?
+Ans: No "Ls" is not same as "ls"
+
+16)Display your currently logged in user
+Ans: echo $USER
+
+17)how do you change the currrently logged in user to another user?
+ans:  -$su –l [USERNAME] command.
+      
+      -Password- enter some password.
+      
+      -$whoami- check if switched to another user. 
+
+18)Which command is used to leave a shell environment that you are currently logged in to?
+ans:  $exit command and ctrl D button to exit.
+
+19)How do you reboot the system?
+ans: $sudo reboot command.
+
+20)How do you shutdown the system?
+ans:$sudo shutdown command.
+
+
+21)Display all the major running processes in the sy
+stem
+ans: -opening termianl window of linux. 
+     - ssh command. 
+     - ps aux command. 
+     -top command or htop command. 
+
+22)Understand the output of command used in above question of displaying processes, explain the meaning of each column and what data it displays?
+ans: -in first step opening the terminal widnow of linux
+     -for login purpose we wil use the command ssh command.
+     -after login to see all the running process in linux we will use ps aux command.
+     -alternativley we will use top command or htop command for display the running process.
+
+23)Display the name of the system kernel
+Ans: By using command "uname -s" we get name of the system kernel.
+     $uname -s -->Linux
+
+24)display the kernel release number
+Ans: By using command "uname -r" we get kernel release number.
+	unam -r --> 4.4.0-19041-Microsoft
+
+25)display the machine type of the current kernel
+Ans: By using command "uname -m" we get machine type.
+	uname -m --> x86_64
+
+26)Display the name of the operating system that the kernel is running on
+Ans:By using command "uname -o" we get name of the operating system.
+	uname -o -->GNU/Linux
+
+27)Display all info that uname command can show.
+Ans: "uname" command prints the System kernal name which is same info of command "uname -s".
+	uname --> Linux
+
+28)Display the name of directory that you are currently pointing to
+Ans: use the command 'pwd' which shows the directory name.
+
+29)change the current directory to another directory that you have in your system.
+ans:cd 
+30)Go up one directory
+Ans: use the command "cd .."
+
+31)Return to last directory
+ans:use the command "cd -"
+32)change the current directory to home(logged in user's) directory
+Ans: type the command "cd /".
+
+34)How to check all the command used from the prompt (Command History)
+ans: use the command  "doskey /history".
+35)In which file the history of commands are stored in?
+ans: i can see my history in  bash_history in your home folder. 
+36)How many lines of history does the system keep and from where you can change it?
+ans: it can show upto 500 lines or commands, and i can change by pressing these command "history -d <line number>".
+
+37)How can you modify bash's history behaviour
+ans: i can modify by using command  "PROMPT_COMMAND".
+38)Display all the commands entered so far, now, try to run a particular command from the history list without typing that command.
+
+NOTE:- TAB key is your friend when it comes to command completion and having long file and directory names autocompleted at the bash prompt for you. JUST BE LAZY AND USE TAB KEY FOR AUTO COMPLETION ;-)
+
+39)What are the different types of shell and where are they used and how do we use them?
+ans:  C shell (csh)-/bin/csh.
+      Bourne shell (sh)-/bin/sh.
+      Korn shell (ksh)-/bin/ksh.
+      Bourne Again shell (bash)-/bin/bash.
+40)What is the difference between login shell and non-login shell?
+ans: the differenece is login shell out will be -bash or -su.
+      for non login shell will be bash or ssu.
+41)How do we start login shell and non-login shell?
+ans: The  Login shell is started after a successful login, using /bin/login, by reading the /etc/passwd file. A Non login shell is started by a program without a login.The program just passes the name of the shell executable.
+
+42)What happens when you start a login shell (which files are read and used and Why)?
+ans: when we calls a login shell login process calls ~/.bash_profile
+
+43)What happens when you start a non-login shell (Which files are read and used and Why)?
+ans: non login process or (shells)  calls ~/.bashrc 
+44)What are Shell Configuration Files, why do we need it?
+ans: They initialize and configure a shell upon login and. 
+Perform cleanup operations upon logout and used for user applications, server processes and operating system settings.
+
+45)Explain the Order of file usage from the system/user's home directory when user logs in to the System.
+ans:  /etc/profile -> /etc/profile.d/ ->/~/bash_profile -> ~/.bashrc ->etc/bashrc 
+
+46)What are Shell Variables, list major shell variables and what do they represent?
+ans: Variables store the data in the form of characters and numbers.Shell variables are used to store information and they can by the shell only.
+      "variable_name=variable_value". For example, the command "set FILE_NAME=file1" creates the shell variable named "FILE_NAME" with a value of "file1".
+
+47)How we see all our env variables?
+ans:  printenv | more 
+
+48)How we see all env variables in alphabical order?
+ans:  printenv | sort
+
+49)What Format does the env var and its values are stored?
+ans:  Key value pair
+
+50)How do you create your own varible?
+ans: variable_name=variable_value 
+51)How do you start a new bash shell?
+ans:first make file like vi filename.sh edit some text in file with first line #!/bin/sh save text then use bash filename.sh
+
+
+52)Difference between Local/Shell variables to Global Variable
+ans: Local variable is declared inside a function whereas Global variable is declared outside the function. Local variables are created when the function has started execution and is lost when the function terminates, on the other hand, Global variable is created as execution starts and is lost when the program ends.
+53)Making a variable accessible from other the shell in the system.
+ans: ~/.profile 
+
+56)Show the real life use case of exporting a variable
+ans:   -You can export a variable from parent process to the child processes. 
+       -Simply set the value for a variable before exporting " export name="[=value]"
+       -export -p to check the exported variables
+
+
+57)Convert the above script file into a command, The file should run with "myappp" instead of "myapp.sh"
+ans: Give execution rights to the script file using chmod u+x file_name.sh
+     - Append the path of the exectuable script file to path cariable in .bash_profile file
+     - Write a code in script file starting with shebang "#!/usr/bin/env bash" and then save it.
+     - Now you need to source .bash_profile once then you can run your myapp.sh as a command.
+
+58)What is Globbing? Explain in depth with examples?
+ans: Globbing is an operation that recognizes the wildcard pattern and expands it into its path name.
+59)List all entries with extension ".sh"
+ans: ls *.sh
+60)List all entries with numbers in it.
+ans: grep -n
+61)List all entries that starts with a character and ends with a number
+ans:grep
+     
+62)List all entries that name length more than 5 characters
+ans: 
+       ($grep -A[NumberOfLines(5)] [search] [file]  )
+ 
+
+63)What is Quoting? and Why do we need it?
+ans: Quoting is used to remove the special meaning of certain characters or words to the shell. Quoting can be used to disable special treatment for special characters, to prevent reserved words from being recognized as such, and to prevent parameter expansion
+
+64)Write few(minimum 3) unique examples that shows, how a particular problem is solved using Quoting.
+ans:   -echo 'Welcome to coding world!'-this will easily print the line.
+       - echo  hello to learning/
+                lets start learning/ - continuous writing
+                with coding.
+       - echo 'hello/'
+
+65)How do you find a particular files/directories based on a particular search criteria?
+HINT:- look for commands -> locate, find and whereis
+ans:  find . -name \*.sh -print
+
+66)Write major difference between locate, find and whereis?
+ans: Big difference is that "find" searches real files recursively down a given directory, while "locate" searches a database without requiring specific directory. Thus, if you have saved a file before updating database, find will find it , but locate won't.  "whereis" is to find a command such as you know its there somewhere but not in your path.
+
+
+67)How Globbing is different from locate, find and whereis?
+ans:  Globbing is mainly used to match filenames or searching for content in a file.locate simply looks its database and reports the file location whereas find does not use a database, it traverses all the directories and their sub directories and looks for files matching the given criterion and whereis commands only give the location of installed application.
+
+68)explain the Linux File System.
+ans:Basically inux file system is a bulit in layer of a linux OS system used to handle the data management of the storage. it helps to arrange the file on the disk storage.it manages the filename ,file size , creation date,and much more informtaion about a file.  
+69)Explain absolute and Relative Paths
+ans: An absolute path refers to the same location in a file system relative to the root directory, whereas a relative path points to a specific location in a file system relative to the current directory you are working on.
+	file in linux System? Write an example of each and the difference between them.
+ans: -.$ touch filename
+     -$ cat > filename 
+     -$ echo "This is the text" > filename
+     -$ grep This file.txt > new_file1.txt
+     - using a text editor like vi,nano,vm
+
+ 
+
+71)In how many ways we can delete the files from linux system? write an example of each and then difference between them.
+ans:  -unlink filename
+      -rm filename
+      -rm *.pdf (it remove all pdf file in our system)
+
+
+72)Archiving files using linux command, write a command to archive set of files from linux commands.
+ans: the command for archiving the set of files
+     tar [flag] [archive-file] [file or directory to be archived])__(1.tar cvf file.tar *.txt
+
+73)Extract the archived files from the above step.
+ans: tar xvf file.tar

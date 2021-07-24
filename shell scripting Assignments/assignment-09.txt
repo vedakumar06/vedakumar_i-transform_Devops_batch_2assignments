@@ -1,0 +1,4 @@
+#! /bin/bash
+ 
+ SERVERLIST=('FTP' 'HTTPS' 'PROXY' 'VM')
+ echo ${SERVERLIST[@]}
